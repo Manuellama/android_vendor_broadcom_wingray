@@ -17,5 +17,15 @@ LOCAL_PATH := vendor/broadcom/wingray
 # Broadcom blobs necessary for wingray hardware
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/proprietary/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
-    $(LOCAL_PATH)/proprietary/bcm4329.cal:system/etc/wifi/bcm4329.cal \
-    $(LOCAL_PATH)/proprietary/fw_bcm4329_mfg.bin:system/vendor/firmware/fw_bcm4329_mfg.bin
+    $(LOCAL_PATH)/proprietary/bcm4329.cal:system/etc/wifi/bcm4329.cal
+
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/proprietary/fw_bcmdhd.bin:system/vendor/firmware/fw_bcmdhd.bin \
+#    $(LOCAL_PATH)/proprietary/fw_bcmdhd_apsta.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary_tf101/fw_bcmdhd.bin:system/vendor/firmware/fw_bcmdhd.bin \
+    $(LOCAL_PATH)/proprietary_tf101/fw_bcmdhd_apsta.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin \
+    $(LOCAL_PATH)/proprietary_tf101/fw_bcmdhd_p2p.bin:system/vendor/firmware/fw_bcmdhd_p2p.bin
+
+#$(LOCAL_PATH)/proprietary/fw_bcm4329_mfg.bin:system/vendor/firmware/fw_bcm4329_mfg.bin
